@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="spanish_receipt_temp" xml:space="preserve">
+    <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='receipt.orderlines']" position="inside">
+            <t t-if="line.spanish_name ">
+                <div class="pos-receipt-right-padding">
+                    <span>Spanish Name  :</span>
+                    <t t-esc="line.spanish_name"/>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>
+
